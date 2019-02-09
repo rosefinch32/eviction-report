@@ -1,0 +1,32 @@
+---
+title: "Evictions Report"
+author: "Cynthia"
+date: "February 8, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("analysis.R")
+```
+
+This is a report regarding evictions in San Francisco. It contains `r num_evictions` # of evictions.
+
+## Zip code analysis
+
+```{r}
+kable(by_zip, col.name = c("Zip Codes", "Evictions"))
+```
+
+```{r}
+by_month
+```
+
+
+## Geographic analysis
+
+Distribution of evictions
+
+```{r, warning=F}
+evictions_plot
+```
